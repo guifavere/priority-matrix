@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Enums\Priority;
+use App\Models\Task;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        Task::factory()->create(['priority' => Priority::IMPORTANT_URGENT, 'title' => 'buy a book', 'order' => 0]);
+        Task::factory()->create(['priority' => Priority::IMPORTANT_NOT_URGENT, 'title' => 'got to gym', 'order' => 0]);
+        Task::factory()->create(['priority' => Priority::NOT_IMPORTANT_URGENT, 'title' => 'call mom', 'order' => 0]);
+        Task::factory()->create(['priority' => Priority::NOT_IMPORTANT_NOT_URGENT, 'title' => 'watch a movie', 'order' => 0]);
     }
 }
