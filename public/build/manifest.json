@@ -1,0 +1,23 @@
+{
+  "resources/js/app.tsx": {
+    "file": "assets/app-B1-PTl-X.js",
+    "name": "app",
+    "src": "resources/js/app.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/pages/Home.tsx"
+    ],
+    "css": [
+      "assets/app-CHibJ5eq.css"
+    ]
+  },
+  "resources/js/pages/Home.tsx": {
+    "file": "assets/Home-CBZfwc4k.js",
+    "name": "Home",
+    "src": "resources/js/pages/Home.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  }
+}
