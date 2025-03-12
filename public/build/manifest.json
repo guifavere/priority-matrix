@@ -1,6 +1,6 @@
 {
   "resources/js/app.tsx": {
-    "file": "assets/app-B1-PTl-X.js",
+    "file": "assets/app-CvjKt0rz.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -12,7 +12,7 @@
     ]
   },
   "resources/js/pages/Home.tsx": {
-    "file": "assets/Home-CBZfwc4k.js",
+    "file": "assets/Home-BqDBAC5C.js",
     "name": "Home",
     "src": "resources/js/pages/Home.tsx",
     "isDynamicEntry": true,
