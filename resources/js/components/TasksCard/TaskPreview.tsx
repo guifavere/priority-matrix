@@ -17,7 +17,7 @@ export const TaskPreview = ({
       <button
         className="border border-stone-800/30 hover:border-white/70 active:border-white text-stone-800 hover:text-white/70 active:text-white rounded-lg h-8 w-8 flex items-center justify-center transition-colors z-10"
         onClick={onStartEditing}
-        title="editar tarefa"
+        title="edit task"
         type="button"
       >
         <MdEdit className="text-base" />
@@ -25,7 +25,7 @@ export const TaskPreview = ({
       <button
         className="border border-stone-800/30 hover:border-white/70 active:border-white text-stone-800 hover:text-white/70 active:text-white rounded-lg h-8 w-8 flex items-center justify-center transition-colors"
         onClick={onComplete}
-        title="finalizar tarefa"
+        title="complete task"
         type="button"
       >
         <MdCheck className="text-lg" />

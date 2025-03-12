@@ -164,7 +164,7 @@ export default function Home({ tasks }: HomeProps) {
     <DndContext onDragEnd={reorderTasks} sensors={sensors}>
       <main className="grid md:grid-cols-2 min-h-dvh w-screen p-4 gap-4">
         <TasksCard className="bg-[#ff8383]">
-          <TasksCardHeader>Importante e urgente</TasksCardHeader>
+          <TasksCardHeader>Important and urgent</TasksCardHeader>
           <TasksCardContent
             onCompleteTask={onCompleteTask}
             onSaveNewTask={onSaveNewTask}
@@ -179,7 +179,7 @@ export default function Home({ tasks }: HomeProps) {
           />
         </TasksCard>
         <TasksCard className="bg-[#fff574]">
-          <TasksCardHeader>Importante mas não urgente</TasksCardHeader>
+          <TasksCardHeader>Important but not urgent</TasksCardHeader>
           <TasksCardContent
             onCompleteTask={onCompleteTask}
             onSaveNewTask={onSaveNewTask}
@@ -194,7 +194,7 @@ export default function Home({ tasks }: HomeProps) {
           />
         </TasksCard>
         <TasksCard className="bg-[#a1d6cb]">
-          <TasksCardHeader>Urgente mas não importante</TasksCardHeader>
+          <TasksCardHeader>Urgent but not important</TasksCardHeader>
           <TasksCardContent
             onCompleteTask={onCompleteTask}
             onSaveNewTask={onSaveNewTask}
@@ -209,7 +209,7 @@ export default function Home({ tasks }: HomeProps) {
           />
         </TasksCard>
         <TasksCard className="bg-[#a19ad3]">
-          <TasksCardHeader>não urgente e não importante</TasksCardHeader>
+          <TasksCardHeader>Not urgent and not important</TasksCardHeader>
           <TasksCardContent
             onCompleteTask={onCompleteTask}
             onSaveNewTask={onSaveNewTask}

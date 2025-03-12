@@ -23,7 +23,7 @@ export const EditTask = ({ defaultValue, onEdit }: EditTaskProps) => {
       defaultValue={defaultValue}
       onBlur={onBlur}
       onKeyDown={onKeyDown}
-      placeholder="Informe o título da tarefa"
+      placeholder="enter the task title"
       type="text"
     />
   );

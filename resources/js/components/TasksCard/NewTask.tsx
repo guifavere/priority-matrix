@@ -20,7 +20,7 @@ export const NewTask = ({ onSave }: NewTaskProps) => {
       className="bg-transparent font-mono outline-none placeholder:text-white/60 text-white/90 md:text-sm w-full"
       onBlur={onBlur}
       onKeyDown={onKeyDown}
-      placeholder="Informe o título da tarefa"
+      placeholder="enter the task title"
       type="text"
     />
   );
