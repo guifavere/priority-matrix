@@ -1,4 +1,4 @@
-import { FocusEventHandler, KeyboardEventHandler } from "react";
+import { type FocusEventHandler, type KeyboardEventHandler } from 'react';
 
 interface EditTaskProps {
   defaultValue: string;
@@ -27,4 +27,4 @@ export const EditTask = ({ defaultValue, onEdit }: EditTaskProps) => {
       type="text"
     />
   );
-}
+};

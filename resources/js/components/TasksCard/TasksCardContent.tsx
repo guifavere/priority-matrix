@@ -22,7 +22,7 @@ export const TasksCardContent = ({
   onEditTask,
   editingTask,
   showNewTask,
-  tasks
+  tasks,
 }: TasksCardContentProps) => {
   const isDisabled = showNewTask || tasks.length === 1;
 
@@ -32,7 +32,10 @@ export const TasksCardContent = ({
         {tasks.map(task => (
           <OrderedTaskItem key={task.id} id={task.id}>
             {editingTask === task.id ? (
-              <EditTask defaultValue={task.title} onEdit={onEditTask(task.id)} />
+              <EditTask
+                defaultValue={task.title}
+                onEdit={onEditTask(task.id)}
+              />
             ) : (
               <TaskPreview
                 onComplete={onCompleteTask(task.id)}

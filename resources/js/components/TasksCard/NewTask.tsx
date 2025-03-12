@@ -1,11 +1,12 @@
-import { FocusEventHandler, KeyboardEventHandler } from "react";
+import { type FocusEventHandler, type KeyboardEventHandler } from 'react';
 
 interface NewTaskProps {
   onSave(title: string): void;
 }
 
 export const NewTask = ({ onSave }: NewTaskProps) => {
-  const onBlur: FocusEventHandler<HTMLInputElement> = event => onSave(event.target.value);
+  const onBlur: FocusEventHandler<HTMLInputElement> = event =>
+    onSave(event.target.value);
 
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = event => {
     if (event.key === 'Enter') onSave(event.currentTarget.value);
@@ -23,4 +24,4 @@ export const NewTask = ({ onSave }: NewTaskProps) => {
       type="text"
     />
   );
-}
+};

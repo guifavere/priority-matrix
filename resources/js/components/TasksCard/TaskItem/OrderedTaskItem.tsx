@@ -1,8 +1,8 @@
-import { type ReactNode } from "react";
-import { useSortable } from "@dnd-kit/sortable";
+import { type ReactNode } from 'react';
+import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 
-import { DefaultTaskItem } from "./DefaultTaskItem";
+import { DefaultTaskItem } from './DefaultTaskItem';
 
 interface OrderedTaskItemProps {
   id: number;
@@ -10,7 +10,8 @@ interface OrderedTaskItemProps {
 }
 
 export const OrderedTaskItem = ({ id, children }: OrderedTaskItemProps) => {
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id });
 
   return (
     <DefaultTaskItem

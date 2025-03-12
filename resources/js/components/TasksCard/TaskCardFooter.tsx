@@ -1,6 +1,6 @@
 interface TasksCardFooterProps {
   onAddNewTask(): void;
-};
+}
 
 export const TasksCardFooter = ({ onAddNewTask }: TasksCardFooterProps) => (
   <footer className="p-3">
@@ -9,6 +9,8 @@ export const TasksCardFooter = ({ onAddNewTask }: TasksCardFooterProps) => (
       onClick={onAddNewTask}
       type="button"
       title="+ adicionar tarefa"
-    >+ adicionar tarefa</button>
+    >
+      + adicionar tarefa
+    </button>
   </footer>
 );
