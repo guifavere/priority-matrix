@@ -5,7 +5,6 @@ import { createRoot, hydrateRoot } from 'react-dom/client';
 import '../css/app.css';
 
 createInertiaApp({
-  title: title => `Priority matrix - ${title}`,
   resolve: name =>
     resolvePageComponent(
       `./pages/${name}.tsx`,

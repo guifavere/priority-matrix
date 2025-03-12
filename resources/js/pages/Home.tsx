@@ -1,4 +1,4 @@
-import { router } from '@inertiajs/react';
+import { Head, router } from '@inertiajs/react';
 import { useState } from 'react';
 import {
   DndContext,
@@ -161,69 +161,72 @@ export default function Home({ tasks }: HomeProps) {
   };
 
   return (
-    <DndContext onDragEnd={reorderTasks} sensors={sensors}>
-      <main className="grid md:grid-cols-2 min-h-dvh w-screen p-4 gap-4">
-        <TasksCard className="bg-[#ff8383]">
-          <TasksCardHeader>Important and urgent</TasksCardHeader>
-          <TasksCardContent
-            onCompleteTask={onCompleteTask}
-            onSaveNewTask={onSaveNewTask}
-            onStartEditingTask={onStartEditingTask}
-            onEditTask={onEditTask}
-            editingTask={editingTask}
-            showNewTask={showNewTask === Priority.ImportantUrgent}
-            tasks={importantUrgentTasks}
-          />
-          <TasksCardFooter
-            onAddNewTask={onShowNewTask(Priority.ImportantUrgent)}
-          />
-        </TasksCard>
-        <TasksCard className="bg-[#fff574]">
-          <TasksCardHeader>Important but not urgent</TasksCardHeader>
-          <TasksCardContent
-            onCompleteTask={onCompleteTask}
-            onSaveNewTask={onSaveNewTask}
-            onStartEditingTask={onStartEditingTask}
-            onEditTask={onEditTask}
-            editingTask={editingTask}
-            showNewTask={showNewTask === Priority.ImportantNotUrgent}
-            tasks={importantNotUrgentTasks}
-          />
-          <TasksCardFooter
-            onAddNewTask={onShowNewTask(Priority.ImportantNotUrgent)}
-          />
-        </TasksCard>
-        <TasksCard className="bg-[#a1d6cb]">
-          <TasksCardHeader>Urgent but not important</TasksCardHeader>
-          <TasksCardContent
-            onCompleteTask={onCompleteTask}
-            onSaveNewTask={onSaveNewTask}
-            onStartEditingTask={onStartEditingTask}
-            onEditTask={onEditTask}
-            editingTask={editingTask}
-            showNewTask={showNewTask === Priority.NotImportantUrgent}
-            tasks={notImportantUrgentTasks}
-          />
-          <TasksCardFooter
-            onAddNewTask={onShowNewTask(Priority.NotImportantUrgent)}
-          />
-        </TasksCard>
-        <TasksCard className="bg-[#a19ad3]">
-          <TasksCardHeader>Not urgent and not important</TasksCardHeader>
-          <TasksCardContent
-            onCompleteTask={onCompleteTask}
-            onSaveNewTask={onSaveNewTask}
-            onStartEditingTask={onStartEditingTask}
-            onEditTask={onEditTask}
-            editingTask={editingTask}
-            showNewTask={showNewTask === Priority.NotImportantNotUrgent}
-            tasks={notImportantNotUrgentTasks}
-          />
-          <TasksCardFooter
-            onAddNewTask={onShowNewTask(Priority.NotImportantNotUrgent)}
-          />
-        </TasksCard>
-      </main>
-    </DndContext>
+    <>
+      <Head title="Priority matrix" />
+      <DndContext onDragEnd={reorderTasks} sensors={sensors}>
+        <main className="grid md:grid-cols-2 min-h-dvh w-screen p-4 gap-4">
+          <TasksCard className="bg-[#ff8383]">
+            <TasksCardHeader>Important and urgent</TasksCardHeader>
+            <TasksCardContent
+              onCompleteTask={onCompleteTask}
+              onSaveNewTask={onSaveNewTask}
+              onStartEditingTask={onStartEditingTask}
+              onEditTask={onEditTask}
+              editingTask={editingTask}
+              showNewTask={showNewTask === Priority.ImportantUrgent}
+              tasks={importantUrgentTasks}
+            />
+            <TasksCardFooter
+              onAddNewTask={onShowNewTask(Priority.ImportantUrgent)}
+            />
+          </TasksCard>
+          <TasksCard className="bg-[#fff574]">
+            <TasksCardHeader>Important but not urgent</TasksCardHeader>
+            <TasksCardContent
+              onCompleteTask={onCompleteTask}
+              onSaveNewTask={onSaveNewTask}
+              onStartEditingTask={onStartEditingTask}
+              onEditTask={onEditTask}
+              editingTask={editingTask}
+              showNewTask={showNewTask === Priority.ImportantNotUrgent}
+              tasks={importantNotUrgentTasks}
+            />
+            <TasksCardFooter
+              onAddNewTask={onShowNewTask(Priority.ImportantNotUrgent)}
+            />
+          </TasksCard>
+          <TasksCard className="bg-[#a1d6cb]">
+            <TasksCardHeader>Urgent but not important</TasksCardHeader>
+            <TasksCardContent
+              onCompleteTask={onCompleteTask}
+              onSaveNewTask={onSaveNewTask}
+              onStartEditingTask={onStartEditingTask}
+              onEditTask={onEditTask}
+              editingTask={editingTask}
+              showNewTask={showNewTask === Priority.NotImportantUrgent}
+              tasks={notImportantUrgentTasks}
+            />
+            <TasksCardFooter
+              onAddNewTask={onShowNewTask(Priority.NotImportantUrgent)}
+            />
+          </TasksCard>
+          <TasksCard className="bg-[#a19ad3]">
+            <TasksCardHeader>Not urgent and not important</TasksCardHeader>
+            <TasksCardContent
+              onCompleteTask={onCompleteTask}
+              onSaveNewTask={onSaveNewTask}
+              onStartEditingTask={onStartEditingTask}
+              onEditTask={onEditTask}
+              editingTask={editingTask}
+              showNewTask={showNewTask === Priority.NotImportantNotUrgent}
+              tasks={notImportantNotUrgentTasks}
+            />
+            <TasksCardFooter
+              onAddNewTask={onShowNewTask(Priority.NotImportantNotUrgent)}
+            />
+          </TasksCard>
+        </main>
+      </DndContext>
+    </>
   );
 }
