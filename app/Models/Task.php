@@ -42,7 +42,7 @@ class Task extends Model
     {
         $lastOrder = Task::query()->where('priority', $priority)->max('order');
 
-        return ! is_null($lastOrder) ? $lastOrder + 1 : 0;
+        return is_null($lastOrder) ? 0 : $lastOrder + 1;
     }
 
     public function scopeNotCompleted(Builder $query): void
