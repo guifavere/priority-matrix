@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Task::factory()->create(['priority' => Priority::IMPORTANT_URGENT, 'title' => 'buy a book', 'order' => 0]);
-        Task::factory()->create(['priority' => Priority::IMPORTANT_NOT_URGENT, 'title' => 'got to gym', 'order' => 0]);
+        Task::factory()->create(['priority' => Priority::IMPORTANT_NOT_URGENT, 'title' => 'go to gym', 'order' => 0]);
         Task::factory()->create(['priority' => Priority::NOT_IMPORTANT_URGENT, 'title' => 'call mom', 'order' => 0]);
         Task::factory()->create(['priority' => Priority::NOT_IMPORTANT_NOT_URGENT, 'title' => 'watch a movie', 'order' => 0]);
     }
